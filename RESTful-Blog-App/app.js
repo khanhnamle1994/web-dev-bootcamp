@@ -87,6 +87,19 @@ app.post("/blog/:id", function(req, res){
   });
 });
 
+// DELETE Route
+app.delete("/blogs/:id", function(req, res){
+  // destroy blog
+  Blog.findByIdAndRemove(req.params.id, function(err){
+    if(err){
+      res.redirect("/blogs");
+    } else {
+      res.redirect("/blogs");
+    }
+  });
+  // redirect somewhere
+});
+
 app.listen(process.env.PORT || 4000, process.env.IP, function(){
   console.log("Server is running");
 })
