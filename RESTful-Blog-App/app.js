@@ -34,6 +34,6 @@ app.get("/blogs", function(req, res){
   });
 });
 
-app.listen(process.env.PORT || 3000, process.env.IP, function(){
+app.listen(process.env.PORT || 4000, process.env.IP, function(){
   console.log("Server is running");
 })
